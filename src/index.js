@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './containers/app';
 
-const title = 'Min react - test';
-
-ReactDOM.render(<div>{title}</div>, document.getElementById('app'));
-
-module.hot.accept();
+ReactDOM.render(<App />, document.getElementById('app'));
