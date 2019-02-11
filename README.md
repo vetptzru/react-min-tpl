@@ -1,7 +1,14 @@
 # react-min-tpl
-Simple template for project using react .
+Template for project using react:
+* react 
+* babel
+* webpack (with hot realod)
+* eslint
+* prettier
+* jest
+* enzyme
+* prop-types
 
-React 16, babel 7 and webpack 4 (with hot reaload)
 
 
 ### For develop
