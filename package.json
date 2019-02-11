@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --hot",
+    "start": "concurrently -k -r -s first \"npm run test:watch\" \"npm run serve\"  \"npm run lint:watch\"",
+    "serve": "webpack-dev-server --open --mode development --hot --color",
     "build": "webpack --mode production",
     "prettier": "prettier '*/**/*.js' --ignore-path ./.prettierignore --write",
-    "lint": "eslint src/**/*.js",
-    "test": "jest"
+    "lint": "esw src  --color",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "jest ",
+    "test:watch": "jest --watch --color"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +27,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
@@ -33,6 +37,7 @@
     "eslint-plugin-jest": "^22.2.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "eslint-watch": "^4.0.2",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.1.0",
     "prettier": "^1.16.4",

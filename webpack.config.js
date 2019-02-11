@@ -33,6 +33,7 @@ module.exports = {
     })
   ],
   devServer: {
-    hot: true
+    hot: true,
+    stats: 'errors-only'
   }
 };
