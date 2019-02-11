@@ -2,7 +2,7 @@
 Template for project using react:
 * react 
 * babel
-* webpack (with hot realod)
+* webpack (with hot reload)
 * eslint
 * prettier
 * jest
