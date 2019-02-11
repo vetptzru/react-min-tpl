@@ -3,3 +3,13 @@ Simple template for project using react .
 
 React 16, babel 7 and webpack 4 (with hot reaload)
 
+
+# For devalop
+```
+npm run start
+```
+
+# For build
+```
+npm run build
+```
